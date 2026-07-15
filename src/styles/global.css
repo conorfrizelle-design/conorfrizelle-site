@@ -32,6 +32,10 @@ body {
   flex-direction: column;
 }
 
+h1 {
+  color: var(--amber-deep);
+}
+
 main {
   width: min(42rem, 100% - 3rem);
   margin: 0 auto;
@@ -296,7 +300,7 @@ a:focus-visible {
   overflow-x: auto;
   padding: 0.5rem 0;
 }
-.post h1,
+
 .post h2 {
   color: var(--amber-deep);
 }
