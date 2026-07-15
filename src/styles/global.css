@@ -176,3 +176,127 @@ a:focus-visible {
 @media (prefers-reduced-motion: no-preference) {
   a { transition: color 120ms ease; }
 }
+
+/* ---------- CV ---------- */
+
+.cv-frame {
+  width: 100%;
+  height: 90vh;
+  border: 1px solid var(--rule);
+}
+
+.cv-download {
+  margin-bottom: 1rem;
+}
+
+.materials-intro {
+  color: var(--ink-soft);
+}
+
+/* ---------- course ---------- */ 
+
+.course {
+  margin-top: 2.5rem;
+}
+
+.course-kicker {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.5rem;
+}
+
+.note-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: 1rem;
+}
+
+.note-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: border-color 120ms ease;
+}
+
+.note-card:hover {
+  border-color: var(--amber-deep);
+}
+
+.note-title {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.note-desc {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.note-meta {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.7rem;
+  color: var(--ink-soft);
+  margin-top: 0.25rem;
+}
+
+/* ---------- blog ---------- */
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+}
+
+.post-link {
+  display: block;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--rule);
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.post-link:hover .post-title {
+  color: var(--amber-deep);
+}
+
+.post-title {
+  display: block;
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.post-meta {
+  display: block;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.7rem;
+  color: var(--ink-soft);
+  margin-top: 0.3rem;
+}
+
+.post-desc {
+  display: block;
+  color: var(--ink-soft);
+  margin-top: 0.4rem;
+}
+
+.post .katex-display {
+  overflow-x: auto;
+  padding: 0.5rem 0;
+}
+.post h1,
+.post h2 {
+  color: var(--amber-deep);
+}

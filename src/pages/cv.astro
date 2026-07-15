@@ -2,7 +2,13 @@
 import Base from "../layouts/Base.astro";
 ---
 
-<Base title="CV · Conor Frizelle">
-  <h1>CV</h1>
-  <p>Coming soon.</p>
+<Base title="CV — Conor Frizelle">
+  <p class="cv-download">
+    <a href="/ConorFrizelleCV.pdf" download>Download CV (PDF)</a>
+  </p>
+  <iframe
+    class="cv-frame"
+    src="/ConorFrizelleCV.pdf"
+    title="Conor Frizelle's CV"
+  ></iframe>
 </Base>

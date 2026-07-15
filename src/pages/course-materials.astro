@@ -1,0 +1,53 @@
+---
+import Base from '../layouts/Base.astro';
+
+const courses = [
+  {
+    code: "18.100B",
+    title: "Real Analysis",
+    notes: [
+      {
+        title: "Lecture 1 Notes",
+        description: "Real Numbers",
+        date: "7/11/26",
+        pdf: "/Notes/Real-Analysis/Lecture-1-Notes.pdf",
+      },
+      {
+        title: "Lecture 2 Notes",
+        description: "Real Numbers Ctd.",
+        date: "7/11/26",
+        pdf: "/Notes/Real-Analysis/Lecture-2-Notes.pdf",
+      },
+      {
+        title: "Lecture 3 Notes",
+        description: "Proofs",
+        date: "7/12/26",
+        pdf: "/Notes/Real-Analysis/Lecture-3-Notes.pdf",
+      },
+    ],
+  },
+];
+---
+<Base title="Course Materials — Conor Frizelle">
+  <h1>Course Materials</h1>
+  <p class="materials-intro">
+    Notes and derivations from my coursework, typeset in LaTeX.
+  </p>
+
+  {courses.map((course) => (
+    <section class="course">
+      <p class="course-kicker">{course.code} — {course.title}</p>
+      <ul class="note-list">
+        {course.notes.map((note) => (
+          <li>
+            <a class="note-card" href={note.pdf}>
+              <span class="note-title">{note.title}</span>
+              <span class="note-desc">{note.description}</span>
+              <span class="note-meta">PDF · {note.date}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))}
+</Base>
