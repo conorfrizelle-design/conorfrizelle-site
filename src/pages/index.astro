@@ -1,17 +1,49 @@
 ---
+import Base from "../layouts/Base.astro";
 
+const divider = `<svg class="spectrum" width="120" height="18" viewBox="0 0 120 18" fill="none" aria-hidden="true">
+  <path d="M0 9 H30 Q34 9 36 4 T42 9 H62 Q66 9 68 13 T74 9 H88 Q91 9 92 6 T96 9 H120"
+        stroke="currentColor" stroke-width="1.5" />
+</svg>`;
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Conor Frizelle</title>
-	</head>
-	<body>
-		<h1>Conor Frizelle</h1>
-	</body>
-</html>
+<Base>
+  <p class="kicker">Chemistry · Applied Mathematics · University of Washington</p>
+
+  <div class="intro">
+    <div class="intro-text">
+      <h1>Hello!</h1>
+      <p>
+        I'm an undergraduate at the University of Washington studying chemistry and
+        applied mathematics, and I do research in an experimental physical chemistry
+        lab. This site is my home base! It's all about research, course notes, and the occasional
+        piece of writing.
+      </p>
+    </div>
+    <img
+      class="portrait"
+      src="/portrait.jpg"
+      alt="Conor Frizelle in graduation regalia at Suzzallo Library"
+      width="900"
+      height="1350"
+    />
+  </div>
+
+  <p>
+    Beyond research and being a student, I am also trying to learn how to be the best educator I
+    can be. My dream is to be a professor myself, so I have a youtube channel where I talk/teach about
+    things that interest me. Check it out at the bottom of this page!
+  </p>
+
+  <Fragment set:html={divider} />
+
+  <h2>Currently</h2>
+  <p>
+    Working on terahertz single-pixel imaging with compressive sensing, and a
+    paper on phthalate composition in storm drain markers (in review).
+  </p>
+  <p>
+    I am also running a home lab, currently trying to turn ethyl acetate into
+    ethanol and sodium acetate.
+  </p>
+</Base>

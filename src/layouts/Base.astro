@@ -1,0 +1,45 @@
+---
+import "../styles/global.css";
+const { title = "Conor Frizelle" } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Conor Frizelle — chemistry and applied mathematics at the University of Washington." />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Karla:wght@400;700&family=IBM+Plex+Mono:wght@400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="inner header-row">
+        <a class="wordmark" href="/">Conor Frizelle<span>.</span></a>
+        <nav class="site-nav">
+          <a href="/cv">CV</a>
+          <a href="/opinions">Opinions</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="inner">
+        <span>© 2026 Conor Frizelle · Seattle, WA</span>
+        <nav class="footer-links">
+          <a href="mailto:you@uw.edu">Email</a>
+          <a href="https://www.youtube.com/channel/UCMofezGNTv0gt2koLSH-qeQ">YouTube</a>
+          <a href="https://www.instagram.com/conorfrizelle">Instagram</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
