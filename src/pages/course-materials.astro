@@ -44,7 +44,7 @@ const courses = [
       },
       {
         title: "Lecture 7 Notes",
-        description: "Bolzano-Weirstrass Theorem; Series",
+        description: "Bolzano-Weierstrass Theorem; Series",
         date: "8/6/26",
         pdf: "/Notes/Real-Analysis/Lecture-7-Notes.pdf",
       },
@@ -86,7 +86,7 @@ const courses = [
       },
       {
         title: "Lecture 14 Notes",
-        description: "Sequential Compactness; Bolzano-Weirstrass Theorem in a Metric Space",
+        description: "Sequential Compactness; Bolzano-Weierstrass Theorem in a Metric Space",
         date: "8/13/26",
         pdf: "/Notes/Real-Analysis/Lecture-14-Notes.pdf",
       },
@@ -155,8 +155,13 @@ const courses = [
   </p>
 
   {courses.map((course) => (
-    <section class="course">
-      <p class="course-kicker">{course.code} — {course.title}</p>
+    <details class="course">
+      <summary class="course-summary">
+        <span class="course-kicker">{course.code}</span>
+        <h2 class="course-title">{course.title}</h2>
+        <span class="course-count">{course.notes.length} notes</span>
+      </summary>
+
       <ul class="note-list">
         {course.notes.map((note) => (
           <li>
@@ -168,6 +173,6 @@ const courses = [
           </li>
         ))}
       </ul>
-    </section>
+    </details>
   ))}
 </Base>

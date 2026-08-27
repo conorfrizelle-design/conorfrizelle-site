@@ -200,7 +200,51 @@ a:focus-visible {
 /* ---------- course ---------- */ 
 
 .course {
-  margin-top: 2.5rem;
+  border-top: 1px solid var(--rule);
+}
+.course:last-of-type {
+  border-bottom: 1px solid var(--rule);
+}
+
+.course-summary {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 1.1rem 0;
+  cursor: pointer;
+  list-style: none;
+}
+.course-summary::-webkit-details-marker {
+  display: none;
+}
+
+.course-summary .course-kicker,
+.course-summary .course-title {
+  margin: 0;
+}
+.course-summary .course-title {
+  font-size: 1.25rem;
+}
+
+.course-count {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+.course-summary::after {
+  content: "▸";
+  display: inline-block;
+  margin-left: auto;
+  color: var(--amber-deep);
+  transition: transform 150ms ease;
+}
+.course[open] .course-summary::after {
+  transform: rotate(90deg);
+}
+
+.course[open] .note-list {
+  padding-bottom: 1.5rem;
 }
 
 .course-kicker {
